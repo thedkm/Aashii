@@ -110,7 +110,7 @@ class Message:
     START_GROUP = "I'm Up"
 
     START_PRIVATE = (
-        "Hello. What do you want to report the admins of <b>{GROUP_NAME}</b> ?"
+        "Hello, Welcome to Support  of Eolian ,Please write your message which you  want to convey to Admins and it will be answered shorty ."
     )
 
     UNBLOCKED_USER = (

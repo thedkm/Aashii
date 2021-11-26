@@ -85,8 +85,7 @@ class Message:
         "the replied message should be a forwarded message by me.\n\n"
         "Otherwise, you can pass the user ID as an argument. "
         "For example, <code>/block 2718281828</code> will block the user of given ID.\n\n"
-        "My source code is available at https://github.com/j-arun-mani/Aashii\n"
-        "Enjoy !"
+       
     )
 
     HELP_PRIVATE = (
@@ -95,8 +94,7 @@ class Message:
         "From a <b>member</b> point of view, using me is dead easy.\n"
         "Just send me any message you wish to inform the admins and "
         "I will forward it to them.\n\n"
-        "My source code is available at https://github.com/j-arun-mani/Aashii\n"
-        "Enjoy !"
+        
     )
 
     INVALID_COMMAND = "I don't understand what you are talking about …"

@@ -10,7 +10,7 @@ class Message:
         "<a href='tg://user?id={USER_ID}'>{USER_FULL_NAME}</a>"
     )
 
-    ADMIN_CONNECTED_STATUS = "An admin has connected with you."
+    ADMIN_CONNECTED_STATUS = "An admin has arrived"
 
     ANNOUNCEMENT_CANCELLED = (
         "Announcement cancelled in progress.\n"
@@ -109,10 +109,10 @@ class Message:
 
     NOT_PRIVATE_COMMAND = "Sorry, this command is meant to be used in admins group."
 
-    START_GROUP = "I'm all alive and functioning."
+    START_GROUP = "I'm Up"
 
     START_PRIVATE = (
-        "Hello. What do you want to convey the admins of <b>{GROUP_NAME}</b> ?"
+        "Hello. What do you want to report the admins of <b>{GROUP_NAME}</b> ?"
     )
 
     UNBLOCKED_USER = (

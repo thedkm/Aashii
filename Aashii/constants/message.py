@@ -89,11 +89,10 @@ class Message:
     )
 
     HELP_PRIVATE = (
-        "Hey there ! It's <b>Aashii</b> here to help you "
-        "in managing communication between members and admins.\n\n"
-        "From a <b>member</b> point of view, using me is dead easy.\n"
-        "Just send me any message you wish to inform the admins and "
-        "I will forward it to them.\n\n"
+        "Welcome to @TheEolianSupportBot 👋"
+        "Feel Free to ask any questions releatd to group and any suggestions.\n\n"
+        "Just send me any message you wish to inform the admins and As soon as an admin connects with you, you'll receive a notification.\n\n"  "
+        "Click /invite if you want to join the The Eolian Group."
         
     )
 

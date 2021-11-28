@@ -90,7 +90,7 @@ class Message:
 
     HELP_PRIVATE = (
         "Welcome to @TheEolianSupportBot 👋"
-        "Feel Free to ask any questions releatd to group and any suggestions.\n\n"
+        "Feel Free to ask any questions related to the group and any suggestions.\n\n"
         "Just send me any message you wish to inform the admins and As soon as an admin connects with you, you'll receive a notification.\n\n"
         "Open @eolianinvitelinkbot and Click /invite if you want to join the The Eolian Group."
         
@@ -110,7 +110,7 @@ class Message:
 
     START_PRIVATE = (
         "Welcome to @TheEolianSupportBot 👋. \n\n"
-        "Feel Free to ask any questions releatd to group and any suggestions.\n\n"
+        "Feel Free to ask any questions related to the group and any suggestions.\n\n"
         "Just send me any message you wish to inform the admins and As soon as an admin connects with you, you'll receive a notification.\n\n"
         "Open @eolianinvitelinkbot and Click /invite if you want to join the The Eolian Group."
     )

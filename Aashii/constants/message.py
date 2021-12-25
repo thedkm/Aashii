@@ -85,7 +85,7 @@ class Message:
         "the replied message should be a forwarded message by me.\n\n"
         "Otherwise, you can pass the user ID as an argument. "
         "For example, <code>/block 2718281828</code> will block the user of given ID.\n\n"
-       
+
     )
 
     HELP_PRIVATE = (
@@ -93,7 +93,7 @@ class Message:
         "Feel Free to ask any questions related to the group and any suggestions.\n\n"
         "Just send me any message you wish to inform the admins and As soon as an admin connects with you, you'll receive a notification.\n\n"
         "Open @eolianinvitelinkbot and Click /invite if you want to join the The Eolian Group."
-        
+
     )
 
     INVALID_COMMAND = "I don't understand what you are talking about …"
@@ -131,6 +131,16 @@ class Message:
 
     USER_CONNECTED = (
         "<a href='tg://user?id={USER_ID}'>{FULL_NAME}</a> has started the bot.\n" + USER
+    )
+
+    INVITE_LINK = (
+        "Your invite link for {GROUP_NAME} is : {INVITE_LINK}"
+    )
+
+    INVITE_LINK_CREATED = (
+        "<a href='tg://user?id={USER_ID}'>{FULL_NAME}</a> has generated an invite link.\n" +
+        USER + "\n" +
+        "Invite : {INVITE_LINK}"
     )
 
     USER_NOT_FOUND = "I can't find the user in my database, something's wrong ..."

@@ -150,6 +150,41 @@ def send_start(update: Update, context: CallbackContext):
     )
     database.add_user_message(update.message.message_id, user_id, message.message_id)
 
+@check_user_status
+def send_invite(update: Update, context: CallbackContext):
+    """Send invite links to private chats"""
+    if update.message.type != update.message.chat.PRIVATE:
+        return
+    buttons = [Button.BLOCK, Button.CONNECT]
+    keyboard = InlineKeyboardMarkup.from_row(buttons)
+    user = update.message.from_user
+    user_id = user.id
+    full_name = user.full_name
+    membership = get_membership(user_id, context)
+    username = f"@{user.username}" if user.username else None
+    invite = context.bot.create_chat_invite_link(
+                chat_id=Literal.CHAT_GROUP_ID,
+                member_limit=1
+            )
+    text = Message.INVITE_LINK_CREATED.format(
+        FULL_NAME=full_name,
+        USER_ID=user_id,
+        USERNAME=username,
+        MEMBERSHIP=membership,
+        BLOCKED=False,
+        INVITE_LINK=invite.invite_link
+    )
+    update.message.reply_html(
+        Message.INVITE_LINK.format(
+            GROUP_NAME=Literal.GROUP_NAME,
+            INVITE_LINK=invite.invite_link
+        )
+    )
+    message = context.bot.send_message(
+        chat_id=Literal.ADMINS_GROUP_ID,
+        text=text,
+        reply_markup=keyboard,
+    )
 
 def static_command(update: Update, context: CallbackContext):
     """Send static command mentioned in static folder."""

@@ -162,6 +162,26 @@ def send_invite(update: Update, context: CallbackContext):
     full_name = user.full_name
     membership = get_membership(user_id, context)
     username = f"@{user.username}" if user.username else None
+
+    if membership in [
+                "Administrator",
+                "Member",
+                "Creator",
+            ]:
+        update.message.reply_html(
+            Message.ALREADY_MEMBER.format(Literal.GROUP_NAME)
+        )
+        return
+
+    elif membership in [
+        "Kicked",
+        "Restricted"
+        ]:
+        update.message.reply_html(
+            Message.KICKED.format(Literal.GROUP_NAME)
+        )
+        return
+
     invite = context.bot.create_chat_invite_link(
                 chat_id=Literal.CHAT_GROUP_ID,
                 member_limit=1

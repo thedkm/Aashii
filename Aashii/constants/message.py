@@ -145,4 +145,12 @@ class Message:
         "Invite : {INVITE_LINK}"
     )
 
+    ALREADY_MEMBER = (
+        "You are already a member of {GROUP_NAME} and hence cannot generate new invites."
+    )
+
+    KICKED = (
+        "You were kicked or restricted from {GROUP_NAME} and hence cannot create new invites."
+    )
+
     USER_NOT_FOUND = "I can't find the user in my database, something's wrong ..."

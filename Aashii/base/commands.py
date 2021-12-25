@@ -153,7 +153,7 @@ def send_start(update: Update, context: CallbackContext):
 @check_user_status
 def send_invite(update: Update, context: CallbackContext):
     """Send invite links to private chats"""
-    if update.message.type != update.message.chat.PRIVATE:
+    if update.message.chat.type != update.message.chat.PRIVATE:
         return
     buttons = [Button.BLOCK, Button.CONNECT]
     keyboard = InlineKeyboardMarkup.from_row(buttons)

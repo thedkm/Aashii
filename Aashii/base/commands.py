@@ -140,8 +140,9 @@ def send_start(update: Update, context: CallbackContext):
         BLOCKED=False,
     )
 
-    update.message.reply_html(
-        Message.START_PRIVATE.format(GROUP_NAME=Literal.GROUP_NAME)
+    update.message.reply_photo(
+        photo="https://telegra.ph/file/c453b00992d7e6aa14ebd.jpg",
+        caption=Message.START_PRIVATE.format(GROUP_NAME=Literal.GROUP_NAME)
     )
     message = context.bot.send_message(
         chat_id=Literal.ADMINS_GROUP_ID,

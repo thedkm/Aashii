@@ -151,6 +151,7 @@ def send_start(update: Update, context: CallbackContext):
     )
     database.add_user_message(update.message.message_id, user_id, message.message_id)
 
+
 @check_user_status
 def send_invite(update: Update, context: CallbackContext):
     """Send invite links to private chats"""
@@ -206,20 +207,6 @@ def send_invite(update: Update, context: CallbackContext):
         text=text,
         reply_markup=keyboard,
     )
-
-def static_command(update: Update, context: CallbackContext):
-    """Send static command mentioned in static folder."""
-    command = update.message.text[1:].split("@")[0]
-
-    try:
-        text = open(f"data/static/{command}").read()
-    except FileNotFoundError:
-        update.message.reply_html(Message.INVALID_COMMAND)
-    else:
-        update.message.reply_html(text)
-
-    if update.message.chat.type != update.message.chat.PRIVATE:
-        context.bot_data["lastUserId"] = Literal.ADMINS_GROUP_ID
 
 
 @check_is_group_command

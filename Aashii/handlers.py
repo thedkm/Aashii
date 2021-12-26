@@ -16,7 +16,6 @@ from Aashii.base.commands import (
     send_help,
     send_start,
     send_invite,
-    static_command,
     unblock_user_cl,
     whois,
 )
@@ -98,12 +97,6 @@ handlers = {
         ),
     ],
     MessageHandler: [
-        (
-            {
-                "filters": Filters.command & ~Filters.chat(Literal.CHAT_GROUP_ID),
-                "callback": static_command,
-            },
-        ),
         (
             {
                 "filters": Filters.chat(Literal.ADMINS_GROUP_ID)

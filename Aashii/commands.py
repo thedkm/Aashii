@@ -2,14 +2,6 @@
 
 import os
 from telegram import BotCommand
-from Aashii.utils.misc import dehtml
-
-
-def _command(fname):
-    cmd = fname
-    with open(f"data/static/{fname}", "r") as staticfp:
-        dsc = dehtml(staticfp.read(80)) + "…"
-    return BotCommand(cmd, dsc)
 
 
 commands = {
@@ -26,5 +18,5 @@ commands = {
         BotCommand("start", "Start the adventure"),
         BotCommand("link", "Get an invite link")
     ],
-    "private": [_command(fname) for fname in os.listdir("data/static")],
+    "private": [],
 }

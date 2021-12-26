@@ -169,7 +169,7 @@ def send_invite(update: Update, context: CallbackContext):
                 "Creator",
             ]:
         update.message.reply_html(
-            Message.ALREADY_MEMBER.format(Literal.GROUP_NAME)
+            Message.ALREADY_MEMBER.format(GROUP_NAME=Literal.GROUP_NAME)
         )
         return
 
@@ -178,7 +178,7 @@ def send_invite(update: Update, context: CallbackContext):
         "Restricted"
         ]:
         update.message.reply_html(
-            Message.KICKED.format(Literal.GROUP_NAME)
+            Message.KICKED.format(GROUP_NAME=Literal.GROUP_NAME)
         )
         return
 

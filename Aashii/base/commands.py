@@ -1,5 +1,6 @@
 """Contains handlers related to commands."""
 
+from datetime import datetime, timedelta
 from telegram import Bot, InlineKeyboardMarkup, Update
 from telegram.ext import CallbackContext
 from Aashii.constants import Button, Literal, Message
@@ -166,10 +167,10 @@ def send_invite(update: Update, context: CallbackContext):
     username = f"@{user.username}" if user.username else None
 
     if membership in [
-                "Administrator",
-                "Member",
-                "Creator",
-            ]:
+        "Administrator",
+        "Member",
+        "Creator",
+    ]:
         update.message.reply_html(
             Message.ALREADY_MEMBER.format(GROUP_NAME=Literal.GROUP_NAME)
         )
@@ -178,15 +179,18 @@ def send_invite(update: Update, context: CallbackContext):
     elif membership in [
         "Kicked",
         "Restricted"
-        ]:
+    ]:
         update.message.reply_html(
             Message.KICKED.format(GROUP_NAME=Literal.GROUP_NAME)
         )
         return
 
+    expiry = datetime.today() + timedelta(minutes=Literal.INVITE_EXPIRY_MINUTES)
+
     invite = context.bot.create_chat_invite_link(
                 chat_id=Literal.CHAT_GROUP_ID,
-                member_limit=1
+                member_limit=1,
+                expire_date=expiry
             )
     text = Message.INVITE_LINK_CREATED.format(
         FULL_NAME=full_name,

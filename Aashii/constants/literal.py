@@ -23,3 +23,5 @@ class Literal:
     STEP = int(os.getenv("STEP", "10"))
 
     TRACEBACK_VALUE = int(os.getenv("TRACEBACK_VALUE", "5"))
+
+    INVITE_EXPIRY_MINUTES = int(os.getenv("INVITE_EXPIRY_MINUTES", "1440"))

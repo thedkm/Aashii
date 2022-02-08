@@ -93,7 +93,7 @@ class Message:
         "Feel Free to ask any questions related to the group and any suggestions.\n\n"
         "Just send me any message you wish to inform the admins and As soon as an admin connects with you, you'll receive a notification.\n\n"
         "Click /link if you want to join the The Eolian Group.\n\n"
-        "Do not request books through this bot!"
+        "Do not request Audiobooks through this bot!"
 
     )
 
@@ -114,7 +114,7 @@ class Message:
         "Feel Free to ask any questions related to the group and any suggestions.\n\n"
         "Just send me any message you wish to inform the admins and As soon as an admin connects with you, you'll receive a notification.\n\n"
         "Click /link if you want to join the The Eolian Group.\n\n"
-        "Do not request books through this bot!"
+        "Do not request Audiobooks through this bot!"
     )
 
     UNBLOCKED_USER = (

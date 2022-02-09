@@ -191,7 +191,7 @@ def send_invite(update: Update, context: CallbackContext):
                 chat_id=Literal.CHAT_GROUP_ID,
                 member_limit=1,
                 expire_date=expiry,
-                creates_join_request=True
+                
             )
     text = Message.INVITE_LINK_CREATED.format(
         FULL_NAME=full_name,

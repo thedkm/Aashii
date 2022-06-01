@@ -16,7 +16,7 @@ commands = {
     "all": [
         BotCommand("help", "Help on usage"),
         BotCommand("start", "Start the adventure"),
-        BotCommand("link", "Get an invite link")
+        # BotCommand("link", "Get an invite link")
     ],
     "private": [],
 }

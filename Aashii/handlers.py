@@ -74,13 +74,13 @@ handlers = {
                 "filters": ~Filters.chat(Literal.CHAT_GROUP_ID),
             },
         ),
-        (
-            {
-                "command": "link",
-                "callback": send_invite,
-                "filters": ~Filters.chat(Literal.CHAT_GROUP_ID),
-            },
-        ),
+        # (
+        #     {
+        #         "command": "link",
+        #         "callback": send_invite,
+        #         "filters": ~Filters.chat(Literal.CHAT_GROUP_ID),
+        #     },
+        # ),
         (
             {
                 "command": "unblock",
